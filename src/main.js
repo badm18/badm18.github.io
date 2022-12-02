@@ -1,8 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
 
-Vue.config.productionTip = false
+import App from "./App.vue";
+import router from "./router";
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+import vuetify from "./plugins/vuetify";
+
+import "./styles/index.css";
+
+const initApp = async () => {
+  new Vue({
+    vuetify,
+    router,
+    render: (h) => h(App),
+  }).$mount("#app");
+};
+
+initApp();
