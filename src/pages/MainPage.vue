@@ -1,6 +1,14 @@
 <template>
   <section class="main">
-    <v-expansion-panels>
+
+  <div>
+  <b>Приавила: </b>
+  <ol>
+  <li>Одину и ту же способность нельзя применять 2 раза подряд на одного и того же человека</li>
+  <li>В случае не выполенния задания человек должен сыграть в правду или действие с приминившем спообность человеком</li>
+  </ol>
+  </div> 
+    <v-expansion-panels  class="main__cards">
       <v-expansion-panel v-for="(item, i) in items()" :key="i">
         <v-expansion-panel-header>
           <b>
@@ -8,8 +16,6 @@
           </b>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          {{ item.description }}
-
           <div class="mt-2">
             <div v-for="(perk, index) in item.perks" :key="index" class="mt-1">
               <div>
